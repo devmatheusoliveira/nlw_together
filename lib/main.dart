@@ -1,45 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:nlw_together/modules/splash/splash_dart.dart';
+import 'package:nlw_together/shared/themes/appcolors.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.lime),
-      home: HomePage(),
-    ),
-  );
+  runApp(AppWidget());
 }
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  var count = 0;
-
-  void increment() {
-    count++;
-    setState(() {});
-  }
+class AppWidget extends StatelessWidget {
+  const AppWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Meu primeiro App"),
-      ),
-      body: Center(
-        child: Text(
-          "Contador\n$count",
-          textAlign: TextAlign.center,
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          increment();
-        },
-      ),
+    return MaterialApp(
+      title: 'PayFlow',
+      theme: ThemeData(primaryColor: AppColors.primary),
+      home: SplashPage(),
     );
   }
 }
