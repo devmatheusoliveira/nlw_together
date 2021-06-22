@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nlw_together/modules/splash/splash_dart.dart';
+import 'package:nlw_together/modules/login/login_page.dart';
+import 'package:nlw_together/modules/splash/splash_page.dart';
 import 'package:nlw_together/shared/themes/appcolors.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: 'PayFlow',
       theme: ThemeData(primaryColor: AppColors.primary),
-      home: SplashPage(),
+      home: LoginPage(),
     );
   }
 }
