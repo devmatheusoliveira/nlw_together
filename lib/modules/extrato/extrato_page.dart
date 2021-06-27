@@ -18,7 +18,7 @@ class _ExtratoPageState extends State<ExtratoPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 24, right: 24, left: 24),

@@ -76,7 +76,7 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                   children: [
                     Expanded(
                       child: Container(
-                        color: Colors.black,
+                        color: Colors.black.withOpacity(0.5),
                       ),
                     ),
                     Expanded(
@@ -87,7 +87,7 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                     ),
                     Expanded(
                       child: Container(
-                        color: Colors.black,
+                        color: Colors.black.withOpacity(0.5),
                       ),
                     )
                   ],

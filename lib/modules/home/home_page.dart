@@ -21,8 +21,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final controller = HomeController();
   final pages = [
-    MeusBoletosPage(),
-    ExtratoPage(),
+    MeusBoletosPage(
+      key: UniqueKey(),
+    ),
+    ExtratoPage(
+      key: UniqueKey(),
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -88,7 +92,7 @@ class _HomePageState extends State<HomePage> {
             ),
             GestureDetector(
               onTap: () async {
-                Navigator.pushNamed(context, "/barcode_scanner");
+                await Navigator.pushNamed(context, "/barcode_scanner");
                 setState(() {});
               },
               child: Container(
